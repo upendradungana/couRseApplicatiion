@@ -53,5 +53,5 @@ $(document).ready(function () {
 // ................................................. for ok btn on verification page
 
 document.querySelector('.btn-warning').addEventListener('click', function() {
-    window.location.href = 'index_DS.html'; // Change 'index.html' to your homepage
+    window.location.href = 'index.html'; // Change 'index.html' to your homepage
 });
