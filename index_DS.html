@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style_SD.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h2 class="logo">CouRce</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index_DS.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">SERVICE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">COURSES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ml-3">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Type To Search" aria-label="Search">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">Modern Tech & <br><span class="highlight">Programming</span> <br>Course</h1>
+                    <p class="lead">Code the Future. Today: Embark on a comprehensive learning journey that equips you with the essential skills to shape tomorrow's technology landscape.</p>
+                    <button class="btn btn-warning btn-lg">JOIN US BY OUR SOCIAL LINKS</button>
+                </div>
+                <div class="col-md-6">
+                <div class="card login-form">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Login Here</h2>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter Username (Optional)">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter Email Here" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Enter Password Here" required>
+                            </div>
+                            <button href="loginmsg.html" class="btn btn-warning btn-block">Login</button>
+                            <p class="text-center mt-3">Don't have an account? <a href="#">Sign up here</a></p>
+                            <p class="text-center">Log in with</p>
+                            <div class="text-center social-icons">
+                                <a href="#" class="btn btn-outline-light btn-circle mx-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-outline-light btn-circle mx-2"><i class="fab fa-google"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Social Links -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>Follow us on:</p>
+            <div class="social-links">
+                <a href="#" class="btn btn-outline-light btn-circle mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="btn btn-outline-light btn-circle mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="btn btn-outline-light btn-circle mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="btn btn-outline-light btn-circle mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="mt-3">&copy; 2025 couRse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- ............................... verification by google or facebook -->
+     <!-- Google API -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=YOUR_FACEBOOK_APP_ID&autoLogAppEvents=1"
+        nonce="abc123"></script>
+
+    <script>
+        // Handling Google Login
+        function handleGoogleResponse(response) {
+            const googleToken = response.credential; // Google JWT Token
+            console.log("Google Token:", googleToken);
+
+            // Redirect after successful login
+            window.location.href = 'verification.html';
+        }
+
+        // Handling Facebook Login
+        function facebookLogin() {
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    console.log('Facebook Token:', response.authResponse.accessToken);
+
+                    // Redirect after successful login
+                    window.location.href = 'verification.html';
+                } else {
+                    console.log('User cancelled login');
+                }
+            });
+        }
+    </script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

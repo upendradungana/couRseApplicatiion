@@ -1,0 +1,487 @@
+/* Navbar Styling */
+.navbar-nav .nav-link {
+    color: white !important; /* Default text color */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: #ff7200 !important; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link */
+}
+
+/* Active Tab Styling */
+.navbar-nav .nav-link.active {
+    color: red !important; /* Active tab color */
+    font-weight: bold; /* Make the active tab bolder */
+}
+
+/* Underline Animation for Active Tab */
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: red; /* Underline color */
+    animation: underline 0.3s ease forwards;
+}
+
+/* Keyframes for Underline Animation */
+@keyframes underline {
+    from {
+        transform: scaleX(0); /* Start with no width */
+    }
+    to {
+        transform: scaleX(1); /* Full width */
+    }
+}
+
+
+/* Custom CSS */
+body {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+}
+
+.hero-section {
+    padding-top: 100px;
+}
+
+.hero-section h1 {
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: bold; /* Make the text bolder */
+}
+
+.hero-section .highlight {
+    color: #00ff88; /* Highlight "Programming" in a different color */
+    font-weight: bold;
+}
+
+.hero-section .lead {
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.login-form {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.login-form h2 {
+    color: #ff7200;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+}
+
+.login-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ff7200;
+    color: #fff;
+}
+
+.login-form input::placeholder {
+    color: #fff;
+    font-family: Arial;
+}
+
+.login-form .btn-warning {
+    background: #ff7200;
+    border: none;
+    color: #000;
+}
+
+.login-form .btn-warning:hover {
+    background: #fff;
+    color: #ff7200;
+}
+
+.login-form .link a {
+    color: #ff7200;
+}
+
+/* Social Icons */
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-circle:hover {
+    transform: scale(1.1);
+    background-color: #ff7200;
+    border-color: #ff7200;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    margin-top: 50px; /* Add margin-top to the footer */
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+/* Navbar Active Tab */
+.nav-item.active .nav-link {
+    color: red !important; /* Make the selected tab red */
+    font-weight: bold; /* Make the selected tab bolder */
+}
+
+/* ................................................................... */
+/* for about page */
+
+/* About Section Styling */
+.about-section {
+    padding-top: 100px; /* Adjust for fixed navbar */
+}
+
+.about-section h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff7200; /* Consistent with home page */
+}
+
+.about-section .highlight {
+    color: #00ff88; /* Highlight color */
+    font-weight: bold;
+}
+
+.about-section .lead {
+    font-family: Arial, sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.about-section img {
+    border: 3px solid #ff7200; /* Consistent border color */
+}
+
+/* Team Section Styling */
+.team-section {
+    padding-top: 50px;
+}
+
+.team-section h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff7200; /* Consistent with home page */
+}
+
+.team-section h4 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333; /* Dark text for contrast */
+}
+
+.team-section p {
+    font-family: Arial, sans-serif;
+    color: #666; /* Lighter text for description */
+}
+
+/* ..........................................................
+for service page */
+
+/* Services Section Styling */
+.services-section {
+    padding-top: 100px; /* Adjust for fixed navbar */
+}
+
+.services-section h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff7200; /* Consistent with home page */
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Add hover effect */
+}
+
+.service-card i {
+    color: #ff7200; /* Icon color */
+}
+
+.service-card h4 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333; /* Dark text for contrast */
+}
+
+.service-card p {
+    font-family: Arial, sans-serif;
+    color: #666; /* Lighter text for description */
+}
+
+/* Why Choose Us Section Styling */
+.why-choose-us h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff7200; /* Consistent with home page */
+}
+
+.why-choose-us h4 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #333; /* Dark text for contrast */
+}
+
+.why-choose-us p {
+    font-family: Arial, sans-serif;
+    color: #666; /* Lighter text for description */
+}
+
+/* ...................................................................................
+for cources */
+
+/* Courses Section Styling */
+.courses-section {
+    padding-top: 100px; /* Adjust for fixed navbar */
+}
+
+.courses-section h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff7200; /* Consistent with home page */
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px); /* Add hover effect */
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 20px;
+}
+
+.course-content h4 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333; /* Dark text for contrast */
+}
+
+.course-content p {
+    font-family: Arial, sans-serif;
+    color: #666; /* Lighter text for description */
+}
+
+.course-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-content ul li {
+    font-family: Arial, sans-serif;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.course-content ul li i {
+    color: #ff7200; /* Icon color */
+}
+
+.course-content .btn {
+    margin-top: 20px;
+}
+
+/* ...........................................................
+for contact page */
+
+/* Contact Section Styling */
+.contact-section {
+    padding-top: 100px; /* Adjust for fixed navbar */
+}
+
+.contact-section h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff7200; /* Consistent with home page */
+}
+
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h4 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333; /* Dark text for contrast */
+}
+
+.contact-details p {
+    font-family: Arial, sans-serif;
+    color: #666; /* Lighter text for description */
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details ul li {
+    font-family: Arial, sans-serif;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-details ul li i {
+    color: #ff7200; /* Icon color */
+}
+
+.social-links .btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links .btn-circle:hover {
+    transform: scale(1.1);
+    background-color: #ff7200;
+    border-color: #ff7200;
+}
+
+/* ......................................................................
+for verification page */
+
+/* Verification Section Styling */
+.verification-section {
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(verification-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.verification-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.verification-icon i {
+    animation: bounce 2s infinite; /* Add bounce animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.verification-content h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff7200; /* Consistent with home page */
+}
+
+.verification-content p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.verification-content .btn {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.verification-content .btn:hover {
+    background: #fff;
+    color: #ff7200;
+    transform: scale(1.1);
+}
